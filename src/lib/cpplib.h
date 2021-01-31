@@ -24,9 +24,7 @@ class CPPLib {
   std::vector<int> UnionVectors(std::vector<int> &input1, std::vector<int> &input2);
 
   //q5
-  void ReverseString(std::string &input);
-  std::vector<int> ReverseVector_1(std::vector<int> input);
-  void ToLower(std::string& input);
+  void ToUpper(std::string& input);
 
   //q6 
   bool canBePalindrome(const std::string &str);

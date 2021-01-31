@@ -31,15 +31,7 @@ std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int>
 }
 
 // Question 5
-void CPPLib::ReverseString(std::string &input)
-{
-    // Please fill up this function.
-}
-std::vector<int> CPPLib::ReverseVector_1(std::vector<int> input)
-{
-    // Please fill up this function.
-}
-void CPPLib::ToLower(std::string& input)
+void CPPLib::ToUpper(std::string& input)
 {
     // Please fill up this function.
 }
