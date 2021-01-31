@@ -91,21 +91,13 @@ bazel test tests:q4_student_test
 
 ## Question 5 (15 Points. Easy)
 
-- Write a function that takes a string as an input and **reverses** its value. The function has no output. It changes the value of the input parameter. Write a simple function ```void CPPLib::ReverseString(std::string &input)``` in [cpplib.cc](src/lib/cpplib.cc). *You are welcomed to call existing STL functions*.
-
-  - Example: Input: “EE599”, Output: “995EE”, string is stricted to be alphanumeric.
-  - You cannot use any new local variable of type *string or vector or array*, but you can create extra O(1) space, such as *int*. The reverse should happen **in place** (i.e. on the input string).
-
-- Write a function that takes a vector as an input and **reverses** its value. Write a simple function ```std::vector<int> CPPLib::ReverseVector_1(std::vector<int> input)``` in [cpplib.cc](src/lib/cpplib.cc)
-
-  - Example: Input: {1,2,3,4}, Output: {4,3,2,1}. 
-  - Use of [stack](https://en.cppreference.com/w/cpp/container/stack) is needed.
-
-- Write a function that converts a string to lower case. Write a simple function ```void CPPLib::ToLower(std::string& )``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
-  - Example: input: “EE599”, output: “ee599”
+Write a function that converts a string to upper case. Write a simple function ```void CPPLib::ToUpper(std::string& input)``` in [cpplib.cc](src/lib/cpplib.cc). The input string is strictly alphanumeric.
+  - Example: input: “ee599”, output: “EE599”
   - Use of [transform](http://www.cplusplus.com/reference/algorithm/transform/) is recommended but not a must.
 
-For all of the three questions, write a test using GTest for your finction in [tests/q5_student_test.cc](tests/q5_student_test.cc).
+Write several tests using GTest for your function in [tests/q5_student_test.cc](tests/q5_student_test.cc).
+
+Please create your test cases and run the following command to verify the functionality of your program.
 ```
 bazel test tests:q5_student_test
 ```
