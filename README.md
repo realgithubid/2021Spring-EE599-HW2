@@ -159,11 +159,11 @@ bazel test tests:q7_student_test
 
 ## Question 8 (20 Points. Medium)
 
- Write a function ```void kthPeek(std::vector<int> &input, int k)``` in [cpplib.cc](src/lib/cpplib.cc). ```std::vector<int> &input``` is not sorted, and ```int k``` is a positive number not larger than the size of input vector.
+ Write a function ```void kthPeek(std::vector<int> &input, int k)``` in [cpplib.cc](src/lib/cpplib.cc), where ```std::vector<int> &input``` is unsorted, and ```int k``` is a positive number not larger than the size of input vector.
 
  The function should 
 - find the kth smallest number of the vector, called pivot.
-- then rearranges the vector that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
+- then rearrange the vector that all the numbers smaller than the pivot will be on pivot's left side in ascending order and all the numbers larger than the pivot will be on pivot's right side in descending order.
 
 Below is one example.
 Input: 
