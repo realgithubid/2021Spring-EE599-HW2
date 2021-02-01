@@ -13,15 +13,16 @@
 Write several functions with the same name ```myfunction``` in [cpplib.cc](src/lib/cpplib.cc). And using function overloading to satisfy the following requirements:
 
 - All three functions take 2 parameters as the input.
-- If both inputs are integers perform multiplication and return the result.
-- If both inputs are string, concatenate both the strings and return the output.
-- If the first input is an integer and the second input is a string or vice-versa your code should return a string that will hold the concatenated value of both the inputs.
+- If both inputs are integers or string, compare them and return the result if they are equal, else return false.
+- If the first input is an integer and the second input is a string or vice-versa your code should return true if the value of string is equal to the interger, else return false. Notice string "05" is equal to integer 5.
 
 Examples:
 
-- input: (3, 5), output: 15
-- input: (“abc”, “efg”), output: “abcefg”
-- input: (“EE”, 599), output: “EE599”
+- input: (5, 5), output: true
+- input: (3, 5), output: false
+- input: (“abc”, “efg”), output: false
+- input: (“EE”, 599), output: false
+- input: ("05", 5), output: true
 
 Write several tests using GTest for your function in [tests/q1_student_test.cc](tests/q1_student_test.cc).
 
@@ -124,31 +125,23 @@ bazel test tests:q6_student_test
 
 ## Question 7 (20 Points. Medium)
 
-Write a function ```std::map<char, char> CPPLib::Mappable(const std::string& from, const std::string& to)``` in [cpplib.cc](src/lib/cpplib.cc).
-Write a function that takes two strings from and to and determines if they are mappable.
+Write a function ```vector<vector<string>> CPPLib::groupAnagrams(vector<string>& strs)``` in [cpplib.cc](src/lib/cpplib.cc).
+Write a function that given an array of strings strs, use map to group the anagrams together. You can return the answer in any order.
 
-- Two strings are mappable if the characters in from can be replaced to get to.
-- You can assume characters are strictly lower cases.  
-- Each character can only map to itself.
-- The output should be a map:
-  - Empty map if the mapping is not possible
-  - The actual map if the mapping was possible
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-Example 1:
-Input: from = "add", to = "egg”
-Output: {(a->e), (d->g)}
+Example 1:\
+Input: strs = ["eat","tea","tan","ate","nat","bat"]\
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
-Example 2:
-Input: from = "extreme", to = "egg”
-Output: { }
+Example 2:\
+Input: strs = [""]\
+Output: [[""]]
 
-Example 3:
-Input: from = "harder", to = "waiter”
-Output: { }, because you cannot map 'r' to 'i' and 'r' at the same time!
+Example 3:\
+Input: strs = ["ab", "ba"]\
+Output: [["ab"]]
 
-Example 4:
-Input: from = "aabbrr", to = "ddeekk”
-Output: {(a->d),(b->e), (r->k)}
 
 Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
 
