@@ -30,7 +30,7 @@ class CPPLib {
   bool canBePalindrome(const std::string &str);
 
   //q7
-  std::map<char, char> Mappable(const std::string& from, const std::string& to);
+  std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs);
 
   //q8
   void kthPeek(std::vector<int> &input, int k);
