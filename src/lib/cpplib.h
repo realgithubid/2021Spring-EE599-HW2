@@ -17,11 +17,11 @@ class CPPLib {
   void SwapByPointer(int *input1, int *input2);
 
   //q4
-  void UniqeVectorNotBySet(std::vector<int> &input);
-  void UniqeVectorBySet(std::vector<int> &input);
+  void UniqueVectorNotBySet(std::vector<int> &input);
+  void UniqueVectorBySet(std::vector<int> &input);
   void ReverseVector(std::vector<int> &input);
-  void OddVector(std::vector<int> &input);
-  std::vector<int> UnionVectors(std::vector<int> &input1, std::vector<int> &input2);
+  void PrimeVector(std::vector<int> &input);
+  std::vector<int> IntersectVectors(std::vector<int> &input1, std::vector<int> &input2);
 
   //q5
   void ToUpper(std::string& input);

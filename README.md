@@ -1,12 +1,13 @@
 
 # HW2 EE599 - Computing Principles for Electrical Engineers
 
-- Plesae clone the repository, edit [README.md](README.md) to answer the questions, and fill up functions to finish the hw.
-- For non-coding quesitions, you will find **Answer** below each question. Please write your answer there.
-- For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests).
+- Please clone the repository, edit [README.md](README.md) to answer the questions, and fill up functions to finish the homework.
+- For non-coding questions, fill out the answers below each question. Please write your answer there.
+- For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). **Do Not change or modify any given function names and input or output formats in both [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). Unexpected changes will result in **zero** credit.**
+- For coding questions, there is a black box testing for each question. All points are only based on passing the test cases or not (i.e. we don't grade your work by your source code). So, try to do comprehensive testing before your final submission.
 - For submission, please push your answers to Github before the deadline.
-- Deadline: Monday, September 21st by 23:59 pm
-- Total: 130 points. 100 points is considered full credit.
+- Deadline: **Friday, February 5th by 6:30 pm**
+- Total: 120 points. 100 points is considered full credit.
 
 ## Question 1 (10 Points. Easy)
 
@@ -43,49 +44,53 @@ Answer:
 
 ## Question 3 (10 Points. Easy)
 
-Write a function swap that will swap the values of the inputs (two integers).
+Write a function swap that will swap the values of the inputs.
 Implement this using
+
+- **pass by pointers**
+
+  ```void CPPLib::SwapByPointer(float *input1, float *input2);```
 
 - **pass by references**
 
-  ```void CPPLib::SwapByRefernce(int &input1, int &input2);```
-- **pass by pointers**
+  ```void CPPLib::SwapByReference(float &input1, float &input2);```
 
-  ```void CPPLib::SwapByPointer(int *input1, int *input2);```
 
 Example :\
-Before: x = 20, y = 30 \
+Before: x = 10, y = 15 \
 We call Swap(x,y) \
-After: x = 30, y = 20
+After: x = 15, y = 10
 
 Write several tests using GTest for your function in [tests/q3_student_test.cc](tests/q3_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
-```
+
+```bash
 bazel test tests:q3_student_test
 ```
 
 ## Question 4 (20 Points. Easy)
 
-- Write a function that takes a vector of integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
+- Write a function that takes a vector of positive integers as input. The output is the same vector where all duplicates are removed. Note that the output is the same vector means the function's return type should be void and do the modifications on the input vector.
   - Example: before: v=[1, 2, 2, 4], after : v=[1, 2, 4]
   - Solve this for the following cases:
     - You cannot use std::set
   
-    ```void CPPLib::UniqeVectorNotBySet(std::vector<int> &input)```
+    ```void CPPLib::UniqueVectorNotBySet(std::vector<int> &input)```
     - You can use std::set
 
-    ```void CPPLib::UniqeVectorBySet(std::vector<int> &input)```
-- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of integers as input. The output is the same vector but in the reversed order:
+    ```void CPPLib::UniqueVectorBySet(std::vector<int> &input)```
+- Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output is the same vector but in the reversed order:
   - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::OddVector(std::vector<int> &input)``` that takes a vector of integers as input. The output should be the same vector where all even numbers are removed.
-  - Example: before: [1, 2, 3], after: [1, 3]
-- Write a function ```std::vector<int> CPPLib::UnionVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **union** of the values in v1 and v2. All the value in return vector should be unique.
+- Write a function ```void CPPLib::PrimeVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output should be the same vector where all numbers are prime numbers.
+  - Example: before: [1, 2, 3], after: [2, 3]
+- Write a function ```std::vector<int> CPPLib::IntersectVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **intersection** of the values in v1 and v2. All the values in return vector should be unique.
   - Example: input: (v1=[1, 2, 2, 3], v2=[3, 4, 4, 5]), output = [1, 2, 3, 4, 5]
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
 Please create your test cases and run the following command to verify the functionality of your program.
+
 ```
 bazel test tests:q4_student_test
 ```
