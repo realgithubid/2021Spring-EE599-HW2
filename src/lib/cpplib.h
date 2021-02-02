@@ -13,8 +13,8 @@ class CPPLib {
   //q1
   // Please create your functions here.
   //q3
-  void SwapByRefernce(int &input1, int &input2);
-  void SwapByPointer(int *input1, int *input2);
+  void SwapByRefernce(float &input1, float &input2);
+  void SwapByPointer(float *input1, float *input2);
 
   //q4
   void UniqueVectorNotBySet(std::vector<int> &input);
