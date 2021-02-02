@@ -15,7 +15,7 @@ Write several functions with the same name ```myfunction``` in [cpplib.cc](src/l
 
 - All three functions take 2 parameters as the input.
 - If both inputs are integers or string, compare them and return the result if they are equal, else return false.
-- If the first input is an integer and the second input is a string or vice-versa your code should return true if the value of string is equal to the interger, else return false. Notice string "05" is equal to integer 5.
+- If the first input is an integer and the second input is a string or vice-versa your code should return true if the value of string is equal to the integer, else return false. Notice string "05" is equal to integer 5.
 
 Examples:
 
