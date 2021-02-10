@@ -6,7 +6,7 @@
 - For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). **Do Not change or modify any given function names and input or output formats in both [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). Unexpected changes will result in **zero** credit.**
 - For coding questions, there is a black box testing for each question. All points are only based on passing the test cases or not (i.e. we don't grade your work by your source code). So, try to do comprehensive testing before your final submission.
 - For submission, please push your answers to Github before the deadline.
-- Deadline: **Friday, February 12th by 6:30 pm**
+- Deadline: **Friday, February 17th by 6:30 pm**
 - Total: 120 points. 100 points is considered full credit.
 
 ## Question 1 (10 Points. Easy)
@@ -82,10 +82,11 @@ bazel test tests:q3_student_test
     ```void CPPLib::UniqueVectorBySet(std::vector<int> &input)```
 - Write a function ```void CPPLib::ReverseVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output is the same vector but in the reversed order:
   - Example: before: [1, 2, 3], after:  [3, 2, 1]
-- Write a function ```void CPPLib::PrimeVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output should be the same vector where all numbers are prime numbers.
-  - Example: before: [1, 2, 3], after: [2, 3]
-- Write a function ```std::vector<int> CPPLib::IntersectVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **intersection** of the values in v1 and v2. All the values in return vector should be unique.
-  - Example: input: (v1=[1, 2, 2, 3], v2=[3, 4, 4, 5]), output = [1, 2, 3, 4, 5]
+- Write a function ```void CPPLib::PrimeVector(std::vector<int> &input)``` that takes a vector of positive integers as input. The output should be the same vector where all numbers are prime numbers. The order of modified vector should follow the order of the input vector.
+  - Example: before: [1, 2, 3, 6], after: [2, 3]
+- Write a function ```std::vector<int> CPPLib::IntersectVectors(std::vector<int> &input1, std::vector<int> &input2)``` that takes two vectors v1 and v2 and returns a new vector that is the **intersection** of the values in v1 and v2. The order of output vector should follow the order of the first input vector.
+
+  - Example: input: (v1=[1, 2, 3, 4, 7], v2=[3, 4, 5, 6]), output = [3, 4]
 
 Write several tests using GTest for your function in [tests/q4student_test.cc](tests/q4_student_test.cc).
 
