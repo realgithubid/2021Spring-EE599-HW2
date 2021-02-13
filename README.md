@@ -146,7 +146,7 @@ Output: [[""]]
 
 Example 3:\
 Input: strs = ["ab", "ba"]\
-Output: [["ab"]]
+Output: [["ab", "ba"]]
 
 
 Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
