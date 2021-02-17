@@ -6,7 +6,7 @@
 - For coding questions, please make sure that your code can run ```bazel run/test```. In this homework, you will need to fill up [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). **Do Not change or modify any given function names and input or output formats in both [cpplib.cc](src/lib/cpplib.cc) and tests in [tests](tests). Unexpected changes will result in **zero** credit.**
 - For coding questions, there is a black box testing for each question. All points are only based on passing the test cases or not (i.e. we don't grade your work by your source code). So, try to do comprehensive testing before your final submission.
 - For submission, please push your answers to Github before the deadline.
-- Deadline: **Friday, February 19th by 6:30 pm**
+- Deadline: **Friday, February 17th by 6:30 pm**
 - Total: 120 points. 100 points is considered full credit.
 
 ## Question 1 (10 Points. Easy)
@@ -41,6 +41,25 @@ How would you find the size of a non-dynamic array? (We are asking about an arra
 - An array of floats
 
 Answer:
+I am using sizeof to find the size of different type of array and get a conclusion, if the array type is int or float, the result should be sizeof(array) devided by 4, for example,
+int myNum[12] = {637}, float myFloats[20] = {0,1,3,4,6,9,1,324,5,2,12,452,123,352,123,21}, the sizeof(myNum) is 48, but the size of the array myNum is 48/4 = 12; for myFloats, sizeof(myFloats) = 80, the size of the array myFloats is 80/4 = 20; for string array, I have a example, string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"}, sizeof(cars) is 32, but the size of myFloats is 32 / 8, so I got another conclusion for string array, the size of string array is sizeof(string array) / 8. The reason I guess is because the bytes for int and float is 4, and is 8 for string.
+
+code: 
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+    int myNum[12] = {637};
+    string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+    float myFloats[20] = {0,1,3,4,6,9,1,324,5,2,12,452,123,352,123,21};
+    cout << "size of int array: " << sizeof(myNum) << "\n";
+    cout << "size of string array: " << sizeof(cars) << "\n";
+    cout << "size of float array: " << sizeof(myFloats) << endl;
+    return 0;
+}
 
 ## Question 3 (10 Points. Easy)
 
@@ -146,7 +165,7 @@ Output: [[""]]
 
 Example 3:\
 Input: strs = ["ab", "ba"]\
-Output: [["ab", "ba"]]
+Output: [["ab"]]
 
 
 Further, write several tests using GTest for your function in [tests/q7_student_test.cc](tests/q7_student_test.cc) and compute the time complexity of your implementation.
